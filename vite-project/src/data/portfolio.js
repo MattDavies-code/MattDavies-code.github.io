@@ -1,20 +1,20 @@
 export default [
    {
-      title: 'Terminal Website',
-      imgUrl: '/assets/terminal-website.jpg',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://fkcodes.com',
+      title: 'Autonomous Delivery Drone',
+      imgUrl: '/assets/AutoDrone.png',
+      stack: ['Java', 'Maven', 'SpringBoot'],
+      link: 'https://github.com/MattDavies-code/Autonomous-drone-delivery',
    },
    {
-      title: 'Developer Portfolio',
-      imgUrl: '/assets/dev-portfolio.jpg',
-      stack: ['React', 'Tailwind', 'Vite'],
-      link: 'https://thehackershideout.com',
+      title: 'Portfolio Website',
+      imgUrl: '/assets/website.png',
+      stack: ['JavaScript', 'React', 'CSS Tailwind'],
+      link: 'https://github.com/MattDavies-code/MattDavies-code.github.io',
    },
    {
-      title: 'AI Nerf Gun',
-      imgUrl: '/assets/ai-nerf-gun.jpg',
-      stack: ['Python', 'C++', 'Robotics'],
-      link: 'https://youtu.be/A8eegxL82PI',
+      title: 'Trends in Movies using IMDb',
+      imgUrl: '/assets/LinearRegression.png',
+      stack: ['Python', 'TensorFlow', 'Seaborn'],
+      link: 'https://github.com/MattDavies-code/Exploring-Movie-Trends-Using-IMDb',
    },
 ]

@@ -1,37 +1,30 @@
 export default [
-   {
-      year: 'Today',
-      title: 'YouTube Content Creator',
-      duration: '6 years',
-      details: 
-         'My humble attempt at building my version of the digital world one step at a time by documenting my coding journey and creating software engineering and computer science content to help those coming behind me.',
-   },
-   {
+	{
+		year: 'The Future',
+		title: 'Software Engineer',
+		duration: 'A Long Time',
+		details:
+			"Looking to collaborate, learn, and contribute to innovative projects within the tech industry. Ready to make a meaningful impact as an engineer.",
+	},
+	{
 		year: 'Today',
-		title: 'Solo Indie Developer',
+		title: "Bachelor's Degree in Computer Science",
 		duration: '4 years',
 		details:
-			"I'm a solo indie developer building software for myself and clients to showcase on YouTube. All coding projects are built from the ground up, from planning and designing all the way to solving real-life problems with code.",
+			"I am pursuing the knowledge that a computer science degree has to offer. I'm learning about algorithms, data structures, and software engineering principles. I am also having fun working as part of a team building a multiplayer Connect-4 robot.",
 	},
 	{
 		year: '2019',
-		title: 'Software Engineer',
+		title: 'A-Levels at Pates Grammar School',
 		duration: '2 years',
 		details:
-			'I helped build an enterprise application for a Fortune 500 company in an Agile team setting. Our tech stack consisted of TypeSciprt, Angular, Java, Gradle, and a handful of other languages and tools.',
-	},
-	{
-		year: '2018',
-		title: "Bachelor's Degree in Computer Science",
-		duration: '5 years',
-		details:
-			'I pursued the knowledge that a computer science degree had to offer. I learned about computer architecture, computer science theory, an array of programming, and aspects of artificial intelligence.',
+			"I founded Computer Science Society with some of my friends and had a blast building a revision website and holding weekly talks on whatever what we found interesting. I also took Maths and Economics A-Levels...",
 	},
 	{
 		year: '2013',
-		title: 'First Line of Code',
-		duration: 'the beginning',
+		title: 'GCSEs at St. Edwards School',
+		duration: '2 years',
 		details:
-			"I wrote my first line of real code that started this journey into digital craftsmanship that I never could've imagined, especially as someone who never saw themselves as anything other than a blue collar worker.",
-	},
+			"I decided to take Computer Sceince GCSE and here is where I wrote my first line of code. I was introduced to the world of programming and I was hooked. I knew that this was what I wanted to do. An amazing teacher did help with that."
+	}
 ]
