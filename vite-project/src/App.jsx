@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
+import NavBar from './components/NavBar';
+
 
 function App() {
 	const [theme, setTheme] = useState(null);
