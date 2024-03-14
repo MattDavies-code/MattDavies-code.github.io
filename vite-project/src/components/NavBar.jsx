@@ -39,7 +39,7 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
 
   return (
     <nav className="fixed w-full z-30 top-0 text-white bg-black bg-opacity-100">
-      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2.5">
+      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2.5 px-10 lg:px-60">
         <div className="pl-4 flex items-center">
           <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-1xl" href="#">
             <img src={Logo} alt="Logo" className="h-12 w-auto" />       </a>
@@ -49,16 +49,16 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
         </div>
         <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-sm lg:flex-grow">
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
-          <Link to="Intro" smooth={true} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white">
+          <Link to="Intro" smooth={true} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
               Intro
             </Link>
-            <Link to="Portfolio" smooth={true} offset={-90} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white">
+            <Link to="Portfolio" smooth={true} offset={-90} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
               Portfolio
             </Link>
-            <Link to="Timeline" smooth={true} offset={-80} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white">
+            <Link to="Timeline" smooth={true} offset={-80} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
               Timeline
             </Link>
-            <Link to="Contact" smooth={true} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white">
+            <Link to="Contact" smooth={true} duration={1000} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-4">
               Contact
             </Link>
           </div>
