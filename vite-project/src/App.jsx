@@ -5,16 +5,16 @@ import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import NavBar from './components/NavBar';
-
+import { Fade } from 'react-awesome-reveal';
 
 function App() {
 	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
-		} else {
 			setTheme('light');
+		} else {
+			setTheme('dark');
 		}
 	}, []);
 
@@ -66,6 +66,7 @@ function App() {
 
   return (
 	<>
+		<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
 		<button
 			type="button"
 			onClick={handleThemeSwitch}
@@ -75,11 +76,21 @@ function App() {
 		</button>
 		<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
+			<Fade triggerOnce>
 				<Intro />
+			</Fade>
+			<Fade triggerOnce>
 				<Portfolio />
+			</Fade>
+			<Fade triggerOnce>
 				<Timeline />
+			</Fade>
+			<Fade triggerOnce>
 				<Contact />
+			</Fade>
+			<Fade triggerOnce>
 				<Footer />
+			</Fade>
 			</div>
 		</div>
 	 </>
