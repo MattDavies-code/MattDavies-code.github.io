@@ -6,7 +6,7 @@
 3. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Project Motivation<a name="motivation"></a>
-This project was initially developed as part of a coursework for my Data Science module at The University of Edinburgh. I decided to dive into a project analyzing movie trends on IMDb simply because I love movies and digging into IMDb's data, I get to explore what movies people are loving, trends in genres, and how the industry evolves over time. 
+I built a portfolio website using React, Vite, and Tailwind CSS to showcase portfolios and explore modern technologies efficiently. React's component-based structure enables modular development, while Vite's rapid build times and Tailwind CSS's utility-first approach ensure a seamless user experience and responsive design. This combination creates a dynamic platform for showcasing portfolios while providing opportunities to learn about cutting-edge web development techniques.
 
 ## File Descriptions <a name="files"></a>
 
