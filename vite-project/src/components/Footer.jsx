@@ -42,8 +42,16 @@ function Footer() {
 								</g>
 								</svg>
 							</a>
+							<a 
+                                href="https://letterboxd.com/maffywaffy/films/by/date/"
+                                className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                                Letterboxd
+                            </a>
 						</div>
 					</div>
+					<div className="mt-5 text-sm text-gray-500"> {/* Add this div */}
+                    &copy; {new Date().getFullYear()} Matthew Davies
+                	</div>
 				</div>
 		</div>
 	);

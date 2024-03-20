@@ -1,8 +1,8 @@
 export default [
 	{
-		year: 'The Future',
+		year: 'Future',
 		title: 'Software Engineer',
-		duration: 'A Long Time',
+		duration: '',
 		details:
 			"Looking to collaborate, learn, and contribute to innovative projects within the tech industry. Ready to make a meaningful impact as an engineer.",
 	},

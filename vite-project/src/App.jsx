@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import NavBar from './components/NavBar';
 import { Fade } from 'react-awesome-reveal';
+import Interests from './components/Interest';
 
 function App() {
 	const [theme, setTheme] = useState(null);
@@ -67,23 +68,16 @@ function App() {
   return (
 	<>
 		<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
-		<button
-			type="button"
-			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
-		>
-			{theme === 'dark' ? sun : moon}
-		</button>
-		<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+		<div className="bg-gradient-to-r from-offWhite-1 to-offWhite-2 dark:from-black dark:to-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
 			<Fade triggerOnce>
 				<Intro />
 			</Fade>
-			<Fade triggerOnce>
-				<Portfolio />
+			<Fade triggerOnce delay={4000}>
+    			<Portfolio />
 			</Fade>
-			<Fade triggerOnce>
-				<Timeline />
+			<Fade triggerOnce delay={4000}>
+    			<Timeline />
 			</Fade>
 			<Fade triggerOnce>
 				<Contact />

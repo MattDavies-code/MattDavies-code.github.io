@@ -1,10 +1,14 @@
 import React from 'react';
 import portfolio from '../data/portfolio';
 import PortfolioItem from './PortfolioItem';
+import Title from './Title';
 
 function Portfolio() {
    return (
-      <div id="Portfolio" className="flex flex-col md:flex-row items-center justify-center">
+      <div id="Portfolio" className="flex flex-col">
+         <div className="mb-30">
+            <Title>Portfolio</Title>
+         </div>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {portfolio.map(project => (
                <PortfolioItem 
