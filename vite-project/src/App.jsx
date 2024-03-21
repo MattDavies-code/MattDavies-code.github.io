@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import NavBar from './components/NavBar';
-import { Fade } from 'react-awesome-reveal';
 import Interests from './components/Interest';
 
 function App() {
@@ -73,10 +74,10 @@ function App() {
 			<Fade triggerOnce>
 				<Intro />
 			</Fade>
-			<Fade triggerOnce delay={4000}>
+			<Fade triggerOnce delay={2500}>
     			<Portfolio />
 			</Fade>
-			<Fade triggerOnce delay={4000}>
+			<Fade triggerOnce delay={2500}>
     			<Timeline />
 			</Fade>
 			<Fade triggerOnce>

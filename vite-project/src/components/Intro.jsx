@@ -19,7 +19,7 @@ function Intro() {
                   
                   Hi, I'm a 3rd year Computer Science student at the University of Edinburgh.
                   <br />
-                  I'm interested in Web Development, Networking, and Cloud Engineering.
+                  I'm interested in Full-Stack Development, Networking, and Cloud Engineering.
                   <br />
                   In my spare time I enjoy playing the piano and football, working out and learning Swedish.
                   <br />
