@@ -51,7 +51,10 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
         <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-sm lg:flex-grow">
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
           <Link to="Intro" smooth={true} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
-              Intro
+              About
+            </Link>
+            <Link to="Skills" smooth={true} offset={-90} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
+              Skills
             </Link>
             <Link to="Portfolio" smooth={true} offset={-90} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
               Portfolio
@@ -67,7 +70,7 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
         <button
           type="button"
           onClick={handleThemeSwitch}
-          className="p-2 z-10 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md mr-4"
+          className="p-2 z-10 bg-blue-300 dark:bg-orange-300 text-lg p-1 rounded-md mr-4"
         >
           {theme === 'dark' ? sun : moon}
         </button>

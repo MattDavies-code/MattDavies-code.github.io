@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { animateScroll as scroll } from 'react-scroll';
 
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -7,7 +8,7 @@ import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import NavBar from './components/NavBar';
-import Interests from './components/Interest';
+import Skills from './components/Skills';
 
 function App() {
 	const [theme, setTheme] = useState(null);
@@ -66,26 +67,51 @@ function App() {
 		</svg>
 	);
 
+	const [showScroll, setShowScroll] = useState(false)
+
+	const checkScrollTop = () => {
+	  if (!showScroll && window.scrollY > 400){
+		setShowScroll(true)
+	  } else if (showScroll && window.scrollY <= 400){
+		setShowScroll(false)
+	  }
+	};
+  
+	const scrollTop = () => {
+		scroll.scrollToTop({ duration: 350 });
+	};
+  
+	useEffect(() => {
+	  window.addEventListener('scroll', checkScrollTop)
+	  return () => window.removeEventListener('scroll', checkScrollTop)
+	}, []);
+
   return (
 	<>
 		<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
-		<div className="bg-gradient-to-r from-offWhite-1 to-offWhite-2 dark:from-black dark:to-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+		<div className="bg-gradient-to-r from-offWhite-1 to-offWhite-2 dark:from-black dark:to-stone-800 text-stone-900 dark:text-stone-300 min-h-screen font-sans">
 			<div className="max-w-5xl w-11/12 mx-auto">
-			<Fade triggerOnce>
-				<Intro />
-			</Fade>
-			<Fade triggerOnce delay={2500}>
-    			<Portfolio />
-			</Fade>
-			<Fade triggerOnce delay={2500}>
-    			<Timeline />
-			</Fade>
-			<Fade triggerOnce>
-				<Contact />
-			</Fade>
-			<Fade triggerOnce>
-				<Footer />
-			</Fade>
+				<Fade triggerOnce>
+					<Intro theme={theme} />
+				</Fade>
+				<Skills />
+				<Fade triggerOnce>
+					<Portfolio />
+				</Fade>
+				<Fade triggerOnce>
+					<Timeline />
+				</Fade>
+				<Fade triggerOnce>
+					<Contact />
+				</Fade>
+				<Fade triggerOnce>
+					<Footer />
+				</Fade>
+				<div className={showScroll ? 'fixed bottom-5 right-5 cursor-pointer z-50' : 'hidden'} onClick={scrollTop}>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10 text-gray-500">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+					</svg>
+				</div>
 			</div>
 		</div>
 	 </>

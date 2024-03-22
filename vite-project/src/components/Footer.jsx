@@ -8,7 +8,7 @@ function Footer() {
 						<div className="flex flex-wrap justify-center gap-2">
 							<a 
 								href="https://www.linkedin.com/in/matthew-davies-a0931a19b/"
-								className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+								className="bg-stone-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								className="w-5 h-5 fill-current"
 								role="img"
@@ -22,7 +22,7 @@ function Footer() {
 							</a>
 							<a 
 								href="https://github.com/MattDavies-code"
-								className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+								className="bg-stone-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								xmlns="http://www.w3.org/2000/svg"
 								xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -44,12 +44,12 @@ function Footer() {
 							</a>
 							<a 
                                 href="https://letterboxd.com/maffywaffy/films/by/date/"
-                                className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                                className="bg-stone-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                                 Letterboxd
                             </a>
 						</div>
 					</div>
-					<div className="mt-5 text-sm text-gray-500"> {/* Add this div */}
+					<div className="mt-5 text-sm text-stone-400"> {/* Add this div */}
                     &copy; {new Date().getFullYear()} Matthew Davies
                 	</div>
 				</div>
