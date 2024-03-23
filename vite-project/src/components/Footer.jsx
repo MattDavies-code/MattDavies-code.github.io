@@ -7,6 +7,20 @@ function Footer() {
 					<div>
 						<div className="flex flex-wrap justify-center gap-2">
 							<a 
+							href="mailto:davies.heddwyn.matthew@gmail.com"
+							className="bg-stone-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
+							>
+							<svg
+								className="w-5 h-5 fill-current"
+								role="img"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M0 0h24v24H0z" fill="none"/>
+								<path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm0 2v4l9 5 9-5V5H3zm18 1.236l-8 4.882-8-4.882V17h16V6.236z" />
+							</svg>
+							</a>
+							<a 
 								href="https://www.linkedin.com/in/matthew-davies-a0931a19b/"
 								className="bg-stone-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg

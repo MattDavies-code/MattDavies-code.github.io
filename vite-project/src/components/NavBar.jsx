@@ -1,8 +1,16 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import Logo from '/assets/logo2T.png';
 
-const NavBar = ({ handleThemeSwitch, theme }) => {
+
+const NavBar = ({ handleThemeSwitch, theme}) => {
+
+  const handleScrollTo = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const sun = (
     <svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +46,7 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
   );
 
   return (
-    <nav className="fixed w-full z-30 top-0 text-white bg-black bg-opacity-100">
+    <nav className="fixed w-full z-30 top-0 text-white bg-black bg-opacity-90">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2.5 px-10 lg:px-60">
         <div className="pl-4 flex items-center">
           <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-1xl" href="#">
@@ -46,31 +54,20 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
           </a>
         </div>
         <div className="block lg:hidden pr-4">
-          {/* Mobile menu button */}
         </div>
         <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-sm lg:flex-grow">
-          <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
-          <Link to="Intro" smooth={true} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
-              About
-            </Link>
-            <Link to="Skills" smooth={true} offset={-90} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
-              Skills
-            </Link>
-            <Link to="Portfolio" smooth={true} offset={-90} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
-              Portfolio
-            </Link>
-            <Link to="Timeline" smooth={true} offset={-80} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-2">
-              Timeline
-            </Link>
-            <Link to="Contact" smooth={true} duration={800} className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-800 hover:text-white mr-4">
-              Contact
-            </Link>
-          </div>
+        <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto mr-4">
+          <button className="bg-black hover:bg-blueGray-900 text-white font-bold py-2 px-4 rounded m-2" onClick={() => handleScrollTo('Intro')}>About</button>
+          <button className="bg-black hover:bg-blueGray-900 text-white font-bold py-2 px-4 rounded m-2" onClick={() => handleScrollTo('Skills')}>Skills</button>
+          <button className="bg-black hover:bg-blueGray-900 text-white font-bold py-2 px-4 rounded m-2" onClick={() => handleScrollTo('Portfolio')}>Portfolio</button>
+          <button className="bg-black hover:bg-blueGray-900 text-white font-bold py-2 px-4 rounded m-2" onClick={() => handleScrollTo('Timeline')}>Timeline</button>
+          <button className="bg-black hover:bg-blueGray-900 text-white font-bold py-2 px-4 rounded m-2" onClick={() => handleScrollTo('Contact')}>Contact</button>
+        </div>
         </div>
         <button
           type="button"
           onClick={handleThemeSwitch}
-          className="p-2 z-10 bg-blue-300 dark:bg-orange-300 text-lg p-1 rounded-md mr-4"
+          className="p-2 z-10 bg-blue-300 dark:bg-red-400 text-lg p-1 rounded-md mr-4"
         >
           {theme === 'dark' ? sun : moon}
         </button>
@@ -78,5 +75,12 @@ const NavBar = ({ handleThemeSwitch, theme }) => {
     </nav>
   );
 };
+function smoothScrollTo(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 
 export default NavBar;

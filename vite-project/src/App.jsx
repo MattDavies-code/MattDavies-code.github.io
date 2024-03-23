@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { animateScroll as scroll } from 'react-scroll';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import './styles/tailwind.css';
+
 
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -9,15 +12,19 @@ import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
+import Background from './components/Background';
+import ParallaxLight from './components/Parallax';
+
 
 function App() {
+	
 	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('light');
-		} else {
 			setTheme('dark');
+		} else {
+			setTheme('light');
 		}
 	}, []);
 
@@ -88,32 +95,75 @@ function App() {
 
   return (
 	<>
-		<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
-		<div className="bg-gradient-to-r from-offWhite-1 to-offWhite-2 dark:from-black dark:to-stone-800 text-stone-900 dark:text-stone-300 min-h-screen font-sans">
-			<div className="max-w-5xl w-11/12 mx-auto">
-				<Fade triggerOnce>
-					<Intro theme={theme} />
-				</Fade>
-				<Skills />
-				<Fade triggerOnce>
-					<Portfolio />
-				</Fade>
-				<Fade triggerOnce>
-					<Timeline />
-				</Fade>
-				<Fade triggerOnce>
-					<Contact />
-				</Fade>
-				<Fade triggerOnce>
-					<Footer />
-				</Fade>
+	<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
+	<div className="relative text-white dark:text-stone-300 min-h-screen font-sans" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: theme === 'light' ? '#282a57' : 'black' }}>		
+		<Parallax pages={3.2} style={{ width: '100%', height: '100%' }}>					
+				
+				{theme === 'light' ? <ParallaxLight style={{ width: '100%', height: '100%' }} /> : <Background />}
+				
+				<ParallaxLayer offset={0} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+							<Fade triggerOnce>
+								<Intro theme={theme} />
+							</Fade>
+						</div>
+					</ParallaxLayer>
+
+					<ParallaxLayer offset={.7} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+							<div style={{ display: 'inline', width: '50%' }}>
+								<Fade triggerOnce>
+									<Skills />
+								</Fade>
+							</div>
+						</div>
+					</ParallaxLayer>
+
+					<ParallaxLayer offset={1.0} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+							<div style={{ display: 'inline', width: '60%' }}>
+								<Fade triggerOnce>
+									<Portfolio />
+								</Fade>
+							</div>
+						</div>
+					</ParallaxLayer>
+
+					<ParallaxLayer offset={1.8} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+							<div style={{ display: 'inline', width: '70%' }}>
+								<Fade triggerOnce>
+									<Timeline />
+								</Fade>
+							</div>
+						</div>
+					</ParallaxLayer>
+
+					<ParallaxLayer offset={2.2} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+							<div style={{ display: 'inline', width: '70%' }}>
+								<Fade triggerOnce>
+									<Contact />
+								</Fade>
+							</div>
+						</div>
+					</ParallaxLayer>
+
+					<ParallaxLayer offset={2.65} speed={0.3}>
+						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+							<Fade triggerOnce>
+								<Footer className="fixed-footer" />
+							</Fade>
+						</div>
+					</ParallaxLayer>
+				</Parallax>
 				<div className={showScroll ? 'fixed bottom-5 right-5 cursor-pointer z-50' : 'hidden'} onClick={scrollTop}>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10 text-gray-500">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
 					</svg>
 				</div>
 			</div>
-		</div>
+		
 	 </>
   )
 }
