@@ -97,7 +97,7 @@ function App() {
 	<>
 	<NavBar handleThemeSwitch={handleThemeSwitch} theme={theme} />
 	<div className="relative text-white dark:text-stone-300 min-h-screen font-sans" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: theme === 'light' ? '#282a57' : 'black' }}>		
-		<Parallax pages={3.2} style={{ width: '100%', height: '100%' }}>					
+		<Parallax pages={4} style={{ width: '100%', height: '100%' }}>					
 				
 				{theme === 'light' ? <ParallaxLight style={{ width: '100%', height: '100%' }} /> : <Background />}
 				
@@ -109,7 +109,7 @@ function App() {
 						</div>
 					</ParallaxLayer>
 
-					<ParallaxLayer offset={.7} speed={0.3}>
+					<ParallaxLayer offset={0.9} speed={0.3}>
 						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
 							<div style={{ display: 'inline', width: '50%' }}>
 								<Fade triggerOnce>
@@ -119,7 +119,7 @@ function App() {
 						</div>
 					</ParallaxLayer>
 
-					<ParallaxLayer offset={1.0} speed={0.3}>
+					<ParallaxLayer offset={1.5} speed={0.3}>
 						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
 							<div style={{ display: 'inline', width: '60%' }}>
 								<Fade triggerOnce>
@@ -129,7 +129,7 @@ function App() {
 						</div>
 					</ParallaxLayer>
 
-					<ParallaxLayer offset={1.8} speed={0.3}>
+					<ParallaxLayer offset={2.3} speed={0.3}>
 						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
 							<div style={{ display: 'inline', width: '70%' }}>
 								<Fade triggerOnce>
@@ -139,7 +139,7 @@ function App() {
 						</div>
 					</ParallaxLayer>
 
-					<ParallaxLayer offset={2.2} speed={0.3}>
+					<ParallaxLayer offset={3} speed={0.3}>
 						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
 							<div style={{ display: 'inline', width: '70%' }}>
 								<Fade triggerOnce>
@@ -149,7 +149,7 @@ function App() {
 						</div>
 					</ParallaxLayer>
 
-					<ParallaxLayer offset={2.65} speed={0.3}>
+					<ParallaxLayer offset={3.4} speed={0.3}>
 						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
 							<Fade triggerOnce>
 								<Footer className="fixed-footer" />
