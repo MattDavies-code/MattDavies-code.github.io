@@ -49,7 +49,7 @@ const NavBar = ({ handleThemeSwitch, theme}) => {
     <nav className="fixed w-full z-30 top-0 text-white bg-black bg-opacity-90">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2.5 px-10 lg:px-60">
         <div className="pl-4 flex items-center">
-          <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-1xl" href="#">
+          <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-1xl ml-6" href="#">
             <img src={Logo} alt="Logo" className="h-12 w-auto" />       
           </a>
         </div>
@@ -67,7 +67,7 @@ const NavBar = ({ handleThemeSwitch, theme}) => {
         <button
           type="button"
           onClick={handleThemeSwitch}
-          className="p-2 z-10 bg-blue-300 dark:bg-red-400 text-lg p-1 rounded-md mr-4"
+          className="p-2 z-10 bg-blue-300 dark:bg-red-400 text-lg p-1 rounded-md mr-20"
         >
           {theme === 'dark' ? sun : moon}
         </button>
